@@ -50,7 +50,6 @@ namespace MyWpfApp.Pages
                 PersonelServiceClient con = new PersonelServiceClient();
                 con.Ekle(emp);
             }
-
           
         }
 
