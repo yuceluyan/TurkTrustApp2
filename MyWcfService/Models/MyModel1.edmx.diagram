@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5252916dc8e1443b94ae968cda312129" Name="Diagram1">
+        <EntityTypeShape EntityType="masterModel.Bolge" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Bolgeler" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Category" Width="1.5" PointX="11.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.CustomerDemographic" Width="1.5" PointX="5.5" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Customer" Width="1.5" PointX="7.75" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Employee" Width="1.5" PointX="7.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Kategoriler" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Musteriler" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Nakliyeciler" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Order" Width="1.5" PointX="10" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Personeller" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Product" Width="1.5" PointX="14" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Region" Width="1.5" PointX="10.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Satis_Detaylari" Width="1.5" PointX="9.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Satislar" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Shipper" Width="1.5" PointX="7.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Supplier" Width="1.5" PointX="11.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Tedarikciler" Width="1.5" PointX="5.25" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Territory" Width="1.5" PointX="13" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Urunler" Width="1.5" PointX="7.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.MSreplication_options" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_fallback_db" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_fallback_dev" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_fallback_usg" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_monitor" Width="1.5" PointX="13.75" PointY="12.75" IsExpanded="true" />
+        <AssociationConnector Association="masterModel.FK_Bolgeler_Bolge" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Orders_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Employees_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Orders_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Urunler_Kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Satislar_Musteriler" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Satislar_Nakliyeciler" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Orders_Shippers" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Personeller_Personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Satislar_Personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Products_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Territories_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Order_Details_Satislar" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Order_Details_Urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Urunler_Tedarikciler" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.CustomerCustomerDemo" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.EmployeeTerritories" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.PersonelBolgeler" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
