@@ -1,0 +1,15 @@
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\Pages\PersonelWindow.g.cs
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\App.g.cs
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\MyWpfApp_MarkupCompile.cache
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\MyWpfApp_MarkupCompile.lref
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\bin\Debug\MyWpfApp.exe.config
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\bin\Debug\MyWpfApp.exe
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\bin\Debug\MyWpfApp.pdb
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\Pages\PersonelWindow.baml
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\MyWpfApp.g.resources
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\MyWpfApp.Properties.Resources.resources
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\MyWpfApp.csproj.GenerateResource.cache
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\MyWpfApp.csproj.CoreCompileInputs.cache
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\MyWpfApp.exe
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\MyWpfApp.pdb
+C:\Users\Samsung\source\repos\MyWpfApp\MyWpfApp\obj\Debug\MyWpfApp.csprojAssemblyReference.cache

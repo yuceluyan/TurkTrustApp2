@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MyWcfService.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MyWcfService.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Employee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BirthDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Employee1" nillable="true" type="tns:Employee" />
+      <xs:element minOccurs="0" name="EmployeeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Employees1" nillable="true" type="tns:ArrayOfEmployee" />
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HireDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HomePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:element minOccurs="0" name="Photo" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PhotoPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportsTo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Territories" nillable="true" type="tns:ArrayOfTerritory" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TitleOfCourtesy" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Employee" nillable="true" type="tns:Employee" />
+  <xs:complexType name="ArrayOfEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployee" nillable="true" type="tns:ArrayOfEmployee" />
+  <xs:complexType name="ArrayOfOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Order" nillable="true" type="tns:Order" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrder" nillable="true" type="tns:ArrayOfOrder" />
+  <xs:complexType name="Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Customer" nillable="true" type="tns:Customer" />
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Employee" nillable="true" type="tns:Employee" />
+      <xs:element minOccurs="0" name="EmployeeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Freight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+      <xs:element minOccurs="0" name="RequiredDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShipAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipPostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipRegion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipVia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ShippedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Shipper" nillable="true" type="tns:Shipper" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Order" nillable="true" type="tns:Order" />
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerDemographics" nillable="true" type="tns:ArrayOfCustomerDemographic" />
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="ArrayOfCustomerDemographic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerDemographic" nillable="true" type="tns:CustomerDemographic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerDemographic" nillable="true" type="tns:ArrayOfCustomerDemographic" />
+  <xs:complexType name="CustomerDemographic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerTypeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Customers" nillable="true" type="tns:ArrayOfCustomer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerDemographic" nillable="true" type="tns:CustomerDemographic" />
+  <xs:complexType name="ArrayOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer" nillable="true" type="tns:Customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomer" nillable="true" type="tns:ArrayOfCustomer" />
+  <xs:complexType name="Shipper">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipperID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Shipper" nillable="true" type="tns:Shipper" />
+  <xs:complexType name="ArrayOfTerritory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Territory" nillable="true" type="tns:Territory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTerritory" nillable="true" type="tns:ArrayOfTerritory" />
+  <xs:complexType name="Territory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Employees" nillable="true" type="tns:ArrayOfEmployee" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="tns:Region" />
+      <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+      <xs:element minOccurs="0" name="TerritoryDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TerritoryID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Territory" nillable="true" type="tns:Territory" />
+  <xs:complexType name="Region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RegionDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+      <xs:element minOccurs="0" name="Territories" nillable="true" type="tns:ArrayOfTerritory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Region" nillable="true" type="tns:Region" />
+</xs:schema>
