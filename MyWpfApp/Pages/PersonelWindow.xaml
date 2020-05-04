@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyWpfApp.Pages"
         mc:Ignorable="d"
-        Title="Personeller" Height="450" Width="800">
+        Title="Personeller" Height="700" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -26,18 +26,28 @@
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center">Adı:</Label>
-                <TextBox x:Name="txtAd" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Text ="{Binding SelectedPersonel.FirstName}"></TextBox>
+                <TextBox x:Name="txtAd" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Text ="{Binding SelectedPersonel.FirstName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <Label Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">Soydı:</Label>
-                <TextBox x:Name="txtSoyAd" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Text ="{Binding SelectedPersonel.LastName}"></TextBox>
+                <TextBox x:Name="txtSoyAd" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Text ="{Binding SelectedPersonel.LastName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <Label Grid.Column="0" Grid.Row="2" VerticalAlignment="Center">Telefon:</Label>
-                <TextBox x:Name="txtTelefon" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Text ="{Binding SelectedPersonel.HomePhone}" PreviewTextInput="TxtTelefon_PreviewTextInput"></TextBox>
+                <TextBox x:Name="txtTelefon" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Text ="{Binding SelectedPersonel.HomePhone, UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="TxtTelefon_PreviewTextInput"></TextBox>
                 <Label Grid.Column="0" Grid.Row="3" VerticalAlignment="Center">Adres:</Label>
-                <TextBox x:Name="txtAdres" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Text ="{Binding SelectedPersonel.Address}"></TextBox>
+                <TextBox x:Name="txtAdres" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Text ="{Binding SelectedPersonel.Address, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <Label Grid.Column="0" Grid.Row="4" VerticalAlignment="Center">Şehir:</Label>
+                <TextBox x:Name="txtSehir" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Text ="{Binding SelectedPersonel.City, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <Label Grid.Column="0" Grid.Row="5" VerticalAlignment="Center">Ülke:</Label>
+                <TextBox x:Name="txtUlke" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Text ="{Binding SelectedPersonel.Country, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <Label Grid.Column="0" Grid.Row="6" VerticalAlignment="Center">Doğum Tarihi:</Label>
+                <DatePicker x:Name="dpDogumTarihi" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" SelectedDate ="{Binding SelectedPersonel.BirthDate, UpdateSourceTrigger=PropertyChanged}"></DatePicker>
             </Grid>
             <Grid Grid.Row="2">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
@@ -49,14 +59,21 @@
                 <Button x:Name="btnGuncelle" Grid.Row="2" Content="Güncelle" Margin="10" Click="BtnGuncelle_Click"></Button>
                 <Button x:Name="btnTemizle" Grid.Row="3" Content="Temizle" Margin="10" Click="BtnTemizle_Click"></Button>
                 <Button x:Name="btnAra" Grid.Row="4" Content="Ara" Margin="10" Click="BtnAra_Click"></Button>
+                <Button x:Name="btnExcel" Grid.Row="5" Content="Excele aktar" Margin="10" Click="BtnExcel_Click"></Button>
             </Grid>
         </Grid>
-
-        <DataGrid x:Name="DgPerson" Grid.Column="1" AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding PersonList}" SelectedItem="SelectedPersonel" SelectedValue="EmployeeID">
-            <DataGridTextColumn Header="Adi"  Binding="{Binding PersonList.FirstName}"/>
-            <DataGridTextColumn Header="SoyAdi"  Binding="{Binding PersonList.LastName}"/>
-            <DataGridTextColumn Header="Telefon"  Binding="{Binding PersonList.HomePhone}"/>
-            <DataGridTextColumn Header="Adres"  Binding="{Binding PersonList.Address}"/>
+        <DataGrid x:Name="dgPerson" Grid.Column="1" AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding PersonList}" SelectedItem="SelectedPersonel" SelectedValue="EmployeeID">
+            <DataGridTextColumn Header="Adi"  Binding="{Binding FirstName}"/>
+            <DataGridTextColumn Header="SoyAdi"  Binding="{Binding LastName}"/>
+            <DataGridTextColumn Header="Telefon"  Binding="{Binding HomePhone}"/>
+            <DataGridTextColumn Header="Adres"  Binding="{Binding Address}"/>
+            <DataGridTextColumn Header="Şehir"  Binding="{Binding City}"/>
+            <DataGridTextColumn Header="Ülke"  Binding="{Binding Country}"/>
+            <DataGridTextColumn Header="Dogum Tarihi"  Binding="{Binding BirthDate}"/>
+            <DataGridTextColumn Header="Posta Kodu"  Binding="{Binding PostalCode}"/>
+            <DataGridTextColumn Header="Notlar"  Binding="{Binding Notes}"/>
+            <DataGridTextColumn Header="Bölge"  Binding="{Binding Region}"/>
+            <DataGridTextColumn Header="Unvan"  Binding="{Binding Title}"/>
         </DataGrid>
     </Grid>
 </Window>

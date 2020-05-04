@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MyWpfApp.Operations;
 
 namespace MyWpfApp.Pages
 {
@@ -21,7 +22,7 @@ namespace MyWpfApp.Pages
     /// MainWindow.xaml etkileşim mantığı
     /// </summary>
      
-    public partial class PersonelWindow : Window
+    public partial class PersonelWindow : System.Windows.Window
     {
         private static readonly Regex regex = new Regex("[^0-9.-]+");
         public List<Employee> PersonelList { get; set; }
@@ -44,6 +45,9 @@ namespace MyWpfApp.Pages
             emp.LastName = txtSoyAd.Text;
             emp.HomePhone = txtTelefon.Text;
             emp.Address = txtAdres.Text;
+            emp.City = txtSehir.Text;
+            emp.Country = txtUlke.Text;
+            emp.BirthDate = dpDogumTarihi.SelectedDate;
 
             if (emp!=null)
             {
@@ -78,6 +82,9 @@ namespace MyWpfApp.Pages
             emp.LastName = txtSoyAd.Text;
             emp.HomePhone = txtTelefon.Text;
             emp.Address = txtAdres.Text;
+            emp.City = txtSehir.Text;
+            emp.Country = txtUlke.Text;
+            emp.BirthDate = dpDogumTarihi.SelectedDate;
 
             PersonelServiceClient con = new PersonelServiceClient();
             con.Guncelle(emp);
@@ -89,6 +96,10 @@ namespace MyWpfApp.Pages
             txtSoyAd.Text = "";
             txtTelefon.Text = "";
             txtAdres.Text = "";
+            txtSehir.Text = "";
+            txtUlke.Text = "";
+            dpDogumTarihi.Text = "";
+            LoadGrid();
         }
 
         private void BtnAra_Click(object sender, RoutedEventArgs e)
@@ -104,7 +115,12 @@ namespace MyWpfApp.Pages
             }
 
         }
-
+        private void BtnExcel_Click(object sender, RoutedEventArgs e)
+        {
+            ExcelExport exc = new ExcelExport();
+            exc.ExceleYaz(dgPerson);
+        }
+  
         private void TxtTelefon_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = !IsTextAllowed(e.Text);
@@ -114,7 +130,5 @@ namespace MyWpfApp.Pages
         {
             return !regex.IsMatch(text);
         }
-
-
     }
 }
