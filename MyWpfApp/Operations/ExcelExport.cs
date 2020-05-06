@@ -25,6 +25,7 @@ namespace MyWpfApp.Operations
                 sheet1.Columns[j + 1].ColumnWidth = 15;
                 myRange.Value2 = dg.Columns[j].Header;
             }
+
             for (int i = 0; i < dg.Columns.Count; i++)
             {
                 for (int j = 0; j < dg.Items.Count; j++)

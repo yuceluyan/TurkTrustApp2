@@ -18,9 +18,6 @@ using MyWpfApp.Operations;
 
 namespace MyWpfApp.Pages
 {
-    /// <summary>
-    /// MainWindow.xaml etkileşim mantığı
-    /// </summary>
      
     public partial class PersonelWindow : System.Windows.Window
     {
@@ -54,7 +51,6 @@ namespace MyWpfApp.Pages
                 PersonelServiceClient con = new PersonelServiceClient();
                 con.Ekle(emp);
             }
-          
         }
 
         private void BtnSil_Click(object sender, RoutedEventArgs e)
@@ -113,8 +109,8 @@ namespace MyWpfApp.Pages
                 PersonelServiceClient con = new PersonelServiceClient();
                 PersonelList = con.Ara(emp).ToList();
             }
-
         }
+
         private void BtnExcel_Click(object sender, RoutedEventArgs e)
         {
             ExcelExport exc = new ExcelExport();
