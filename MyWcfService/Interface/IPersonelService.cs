@@ -29,5 +29,4 @@ namespace MyWcfService
         List<Employee> Ara(Employee emp);
 
     }
-
 }

@@ -19,7 +19,6 @@ namespace MyWcfService
                 ctx.Employees.Add(emp);
                 ctx.SaveChanges();
             }
-            
         }
 
         public void Guncelle(Employee emp)
