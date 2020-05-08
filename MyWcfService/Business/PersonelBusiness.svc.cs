@@ -11,7 +11,6 @@ namespace MyWcfService
 {
     public class PersonelBusiness : IPersonelService
     {
-
         public void Ekle(Employee emp)
         {
             using (masterEntities ctx = new masterEntities())

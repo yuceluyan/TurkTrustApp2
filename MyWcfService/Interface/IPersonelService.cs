@@ -12,7 +12,6 @@ namespace MyWcfService
     [ServiceContract]
     public interface IPersonelService
     {
-
         [OperationContract]
         void Ekle (Employee emp);
 
@@ -27,6 +26,5 @@ namespace MyWcfService
 
         [OperationContract]
         List<Employee> Ara(Employee emp);
-
     }
 }
