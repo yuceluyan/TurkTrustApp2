@@ -18,7 +18,6 @@ using MyWpfApp.Operations;
 
 namespace MyWpfApp.Pages
 {
-     
     public partial class PersonelWindow : System.Windows.Window
     {
         private static readonly Regex regex = new Regex("[^0-9.-]+");

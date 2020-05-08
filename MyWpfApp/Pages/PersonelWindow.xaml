@@ -16,7 +16,7 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="2*"></RowDefinition>
             </Grid.RowDefinitions>
-            <GroupBox Header="Personel İşlemleri" Margin="5">
+            <GroupBox Header="Personel Bilgi İşlemleri" Margin="5">
                 <Grid Margin="10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>

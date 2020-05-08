@@ -13,6 +13,7 @@ namespace MyWpfApp.Operations
     {
         public void ExceleYaz(DataGrid dg)
         {
+
             Excel.Application excel = new Excel.Application();
             excel.Visible = true;
             Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
